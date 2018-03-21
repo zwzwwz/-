@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index1/index1",
+    "pages/index2/index2",
+    "pages/index3/index3",
+    "pages/index4/index4",
+    "pages/logs4/logs4",
+    "pages/logs4-1/logs4-1",
+    "pages/logs4-1-1/logs4-1-1",
+    "pages/logs4-2/logs4-2",
+    "pages/logs4-3/logs4-3",
+    "pages/logs4-4/logs4-4",
+    "pages/logs4-5/logs4-5",
+    "pages/logs4-5-1/logs4-5-1",
+    "pages/logs4-5-2/logs4-5-2"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#00BFFF",
+    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarTitleText": "易学呗",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#545454",
+    "backgroundColor": "#FFFAFA",
+    "borderStyle": "black",
+    "selectedColor": "#00BFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/首页.png",
+        "selectedIconPath": "image/首页1.png"
+      },
+      {
+        "pagePath": "pages/logs4/logs4",
+        "text": "我的",
+        "iconPath": "image/我的.png",
+        "selectedIconPath": "image/我的1.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

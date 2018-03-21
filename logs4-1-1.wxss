@@ -1,0 +1,77 @@
+/* pages/logs4-1-1/logs4-1-1.wxss */
+.recommend {
+display: block;
+}
+.recommend2 {
+  padding-left:40rpx; 
+  width: 92%;
+  padding-top:40rpx
+}
+.recommend3 {
+  font-weight: bold;
+  font-size: 46rpx;
+}
+.recommend4 {
+  position: absolute;
+  padding-left:0rpx;
+  width: 92%;
+  padding-top: 16rpx
+}
+.recommend5 {
+height: 310rpx;
+padding-top:40rpx;
+padding-left: 20px;
+width: 90%
+}
+.recommend6 {
+  border: 1px solid #ccc;
+  width: 98%;
+}
+.recommend7 {
+  padding-left:40rpx;
+  height: 40px;
+  width: 92%;
+  padding-top:30rpx
+}
+.recommend8 {
+  padding-top:40rpx;
+  padding-left:40rpx; 
+  width: 92%;
+}
+.text{
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    font-size: 36rpx;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3;
+}
+.text1 {
+  color: gray;
+  position: absolute;
+  padding-left: 500rpx;
+  padding-top: 15rpx
+}
+.text2 {
+  color: gray;
+  position: absolute;
+  padding-left: 610rpx;
+  padding-top: 15rpx
+}
+.userinfo-avatar1 {
+  position: absolute;
+  flex-shrink : 0;
+  width: 48rpx;
+  height: 48rpx;
+  padding-left: 450rpx;
+  padding-top: 8rpx
+}
+.userinfo-avatar2 {
+  position: absolute;
+  flex-shrink : 0;
+  width: 48rpx;
+  height: 48rpx;
+  padding-left: 560rpx;
+  padding-top: 8rpx
+}

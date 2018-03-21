@@ -1,0 +1,25 @@
+<!--pages/logs4-1-1/logs4-1-1.wxml-->
+<template name="msgItem">
+  <view wx:if="{{articleimagesrc}}">
+  <image src="{{articleimagesrc}}" class='recommend5'  width="35" height="50" mode='aspectFill'></image>
+  </view>
+  <view class='recommend2'>
+  <view class='recommend3'>{{title}}</view>
+  </view>
+  <view class='recommend8'>
+  <view class='text'> {{article}} </view>
+  </view>
+  <view class='recommend7'>
+  <view class='recommend4'>{{titletime}}</view>
+  <image src='/image/1.png' class='userinfo-avatar1'/>
+  <view class='text1'>{{likenumber}}</view>
+  <image src='/image/3.png' class='userinfo-avatar2'/>
+  <view class='text2'>{{commentnumber}}</view>
+  </view>
+  <view class='recommend6'></view>
+</template>
+<view class='recommend'>
+<view wx:for="{{staffmyarticles}}" wx:key="unique" bindtap='nextmyarticles'  data-texttile='{{item}}' bindlongpress='delmyarticles'>
+<template is="msgItem" data="{{...item}}"/>
+</view>
+</view>

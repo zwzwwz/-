@@ -1,0 +1,47 @@
+/* pages/logs4-5/logs4-5.wxss */
+.recommend {
+  position: relative;
+  margin-top: 5px;
+}
+.recommend1 {
+  border: 1rpx solid #ccc;
+  width: 98%;
+}
+.recommend2 {
+  padding-top: 10px;
+  display: inline-block;
+  padding-left: 130px;
+}
+.recommend3 {
+  padding-top: 10px;
+  display: inline-block;
+  padding-left: 34px
+}
+.recommend4 {
+  display: inline-block;
+  position: absolute;
+  color: gray;
+  font-size: 33rpx;
+  margin-top: 25px;
+  margin-left: 5px
+}
+.recommend5 {
+  position: absolute;
+  border: 1px solid #ccc;
+  width: 98%;
+  margin-top: 22rpx;
+}
+.recommend6 {
+  position: absolute;
+  border: 1px solid red;
+  width: 6%;
+  margin-top: 22rpx;
+}
+.userinfo-avatar {
+  flex-shrink : 0;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 500%;
+  margin-left:40rpx;
+  margin-top:30rpx
+}

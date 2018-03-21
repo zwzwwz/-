@@ -1,0 +1,12 @@
+/* pages/index4/index4.wxss */
+.commend1 {
+  position: fixed;
+  width: 100%;
+  height: 91%
+}
+.commend2 {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #00BFFF;
+}

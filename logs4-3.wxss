@@ -1,0 +1,64 @@
+/* pages/logs4-3/logs4-3.wxss */
+.recommend1 {
+  margin-top: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 40px
+}
+.recommend2 {
+  font-weight: 800;
+  font-size: 24px;
+  word-break: break-all;
+}
+.recommend3 {
+  font-size: 20px;
+  word-break: break-all;
+}
+.recommend5 {
+height: 170px;
+width: 100%
+}
+.recommend6{
+font-size: 15px;
+margin-top: 3px;
+font-weight: 550;
+word-break: break-all;
+}
+.recommend7 {
+  border-top: 2px solid #ccc;
+  margin-top:5px 
+}
+.recommend8 {
+  font-weight: 800;
+  font-size: 17px;
+}
+.recommend9 {
+  margin-left: 40px;
+  font-size: 13px;
+}
+.recommend10 {
+  margin-left: 40px;
+  font-size: 13px;
+}
+.recommend11 {
+  position: relative;
+  top:35px;
+  padding-left: 215px;
+  font-size: 13px;
+}
+.recommend12 {
+  position: absolut;
+  margin-top: 15px
+}
+.recommend13 {
+  top: 10px;
+  margin-left: 38px;
+  font-size: 13px;
+}
+.userinfo-avatar {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 500%;
+  position: absolute;
+}

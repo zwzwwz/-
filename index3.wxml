@@ -1,0 +1,62 @@
+<!--pages/index3/index3.wxml-->
+<view class='recommend1' bindtouchstart="containerTap">
+  <view wx:if="{{articleimagesrc}}">
+  <image src="{{articleimagesrc}}" class='recommend5'  width="50" height="50" mode='aspectFill'></image>
+  </view>
+<text selectable="{{true}}" class='recommend2'> {{title}} </text>
+<view class='recommend17' style='background-color:{{backgroundcolor}};-webkit-text-fill-color:{{color}}; border: 1px solid {{color}};' bindtap='attention'>{{attentiontext}}</view>
+<view class='recommend11'>{{titletime}}</view>
+<image src='{{titlesrc}}' class='userinfo-avatar'></image>
+<view class='recommend9'> {{titlename}} </view>
+<view class='recommend10'>来源于{{classifyvalue}}</view>
+<view class='recommend12'>
+<text selectable="{{true}}" class='recommend3'> {{article}} </text>
+</view>
+<view class='recommend8'>全部评论</view>
+<view class='recommend7'></view>
+<block wx:for="{{comment}}" wx:key="unique" >
+<button class='recommend14' size='mini' style='color:white;opacity:0.8'  bindtap='Hidden' data-reply='{{item}}' hidden='{{item.hidden}}'>回复</button>
+<image src='{{item.commenttitlesrc}}' class='userinfo-avatar3' hidden='{{item.hidden}}' data-reply='{{item}}' bindtap='replyhidden'></image>
+<view class='recommend4' hidden='{{item.hidden}}'> {{item.commentname}} </view>
+<view class='recommend13' hidden='{{item.hidden}}'>{{item.commenttitletime}}</view>
+<block wx:if="{{item.hidden}}">
+<view class='recommend15'>
+<input  focus='{{true}}' class='recommend16' data-reply='{{item}}'  bindblur='blurfocus' confirm-type='send' bindconfirm='replymessage'/>
+</view>
+</block>
+<view class='recommend6'> {{item.commenttitle}} </view>
+<block wx:if="{{item.replyhidden}}">
+<block wx:for="{{replymessage}}" wx:key="unique">
+<image src='{{item.replyusersrc}}' class='userinfo-avatar4' ></image>
+<view class='recommend4' >{{item.replyusername}} </view>
+<view class='recommend13'>{{item.replyusertime}}</view>
+<view class='recommend6'>{{item.replytitle}}</view>
+</block>
+</block>
+<view class='recommend7'></view>
+</block>
+</view>
+<!--触摸水波涟漪效果-->
+<view class="ripple" style="{{rippleStyle}}"></view>
+
+
+
+
+
+
+
+
+<view class="music-head">
+  <!--评论框-->
+  <view class="searchBar" >
+    <!--未focus时 评论-->
+    <view class="searchBox2" bindtap='focusevent'>
+      <icon class="searchIcon" type="search" size="14"  />
+      <input class="searchInput" placeholder="评论" disabled='{{true}}' />
+    </view>
+      <image src="{{likesrc}}"  class='userinfo-avatar1' bindtap='like'/>
+      <view class='text'>{{likenumber}}</view>
+      <image src="{{collectsrc}}"  class='userinfo-avatar2' bindtap='collect'/>
+      <view class='text1'>{{collectnumber}}</view>
+      </view>
+</view>

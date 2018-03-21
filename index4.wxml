@@ -1,0 +1,5 @@
+<!--pages/index4/index4.wxml-->
+<form bindsubmit="commentsubmit">
+<textarea  show-confirm-bar="{{false}}" name="article" class='commend1' maxlength="-1"   fixed="{{true}}" placeholder="写评论......"></textarea>
+<button form-type='submit' class='commend2' style='color:white'>发送</button>
+</form>

@@ -1,0 +1,15 @@
+<!--pages/logs4-3/logs4-3.wxml-->
+<view class='recommend1'>
+  <view wx:if="{{articleimagesrc}}">
+  <image src="{{articleimagesrc}}" class='recommend5'  width="50" height="50" mode='aspectFill'></image>
+  </view>
+<text selectable="{{true}}" class='recommend2'> {{title}} </text>
+<view class='recommend11'>{{titletime}}</view>
+<image src='{{titlesrc}}' class='userinfo-avatar'></image>
+<view class='recommend9'> {{titlename}} </view>
+<view class='recommend10'>来源于{{classifyvalue}}</view>
+<view class='recommend12'>
+<text selectable="{{true}}" class='recommend3'> {{article}} </text>
+</view>
+<view class='recommend7'></view>
+</view>

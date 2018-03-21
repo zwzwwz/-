@@ -1,0 +1,26 @@
+<!--pages/logs4-2/logs4-2.wxml-->
+<template name="msgItem">
+  <view wx:if="{{articleimagesrc}}">
+  <image src="{{articleimagesrc}}" class='recommend5'  width="35" height="50" mode='aspectFill'></image>
+  </view>
+  <view class='recommend2'>
+  <view class='recommend3'>{{title}}</view>
+  </view>
+  <view class='recommend8'>
+  <view class='text'> {{article}} </view>
+  </view>
+  <view class='recommend7'>
+  <image class="userinfo-avatar" src="{{titlesrc}}" background-size="cover"></image>
+  <view class='recommend4'>来源于{{classifyvalue}}</view>
+  <image src='/image/1.png' class='userinfo-avatar1'/>
+  <view class='text1'>{{likenumber}}</view>
+  <image src='/image/5.png' class='userinfo-avatar2'/>
+  <view class='text2'>{{collectnumber}}</view>
+  </view>
+  <view class='recommend1'></view>
+</template>
+<view class='recommend'>
+<view wx:for="{{staffmycollect}}" wx:key="unique" bindtap='nextmycollect'  data-texttile='{{item}}' bindlongpress='delmycollect'>
+<template is="msgItem" data="{{...item}}"/>
+</view>
+</view>

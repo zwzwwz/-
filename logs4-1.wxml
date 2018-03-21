@@ -1,0 +1,54 @@
+<!--pages/logs4-1/logs4-1.wxml-->
+  <view class="searchBar" >
+    <!--未focus时 搜索icon-->
+    <view class="searchBox2"  style='background-color:{{backgroundcolor}};-webkit-text-fill-color:{{color}}' bindtap='staffjudge'>文章</view>
+    <view class="searchBox3" style='background-color:{{color}};-webkit-text-fill-color:{{backgroundcolor}}' bindtap='staffjudge1'>分类</view>
+    </view>
+    <view class='recommend6'></view>
+
+
+
+<template name="msgItem">
+  <view wx:if="{{articleimagesrc}}">
+  <image src="{{articleimagesrc}}" class='recommend5'  width="35" height="50" mode='aspectFill'></image>
+  </view>
+  <view class='recommend2'>
+  <view class='recommend3'>{{title}}</view>
+  </view>
+  <view class='recommend8'>
+  <view class='text'> {{article}} </view>
+  </view>
+  <view class='recommend7'>
+  <view class='recommend4'>{{titletime}}</view>
+  <image src='/image/1.png' class='userinfo-avatar1'/>
+  <view class='text1'>{{likenumber}}</view>
+  <image src='/image/3.png' class='userinfo-avatar2'/>
+  <view class='text2'>{{commentnumber}}</view>
+  </view>
+  <view class='recommend6'></view>
+</template>
+<block wx:if="{{judge}}">
+<view class='recommend'>
+<view wx:for="{{staffmyarticles}}" wx:key="unique" bindtap='nextmyarticles'  data-texttile='{{item}}' bindlongpress='delmyarticles'>
+<template is="msgItem" data="{{...item}}"/>
+</view>
+</view>
+</block>
+
+
+
+
+<template name="msgItem1">
+  <view class='recommend10'>
+  <view class='recommend9'>{{classname}}</view>
+  <view class='recommend11'>{{classnumber}}篇</view>
+  </view>
+  <view class='recommend6'></view>
+  </template>
+<block wx:if="{{!judge}}">
+<view class='recommend'>
+<view wx:for="{{staffclassifyvalue}}" wx:key="unique" bindtap='nextstaffclassifyvalue'  data-texttile='{{item}}'>
+<template is="msgItem1" data="{{...item}}"/>
+</view>
+</view>
+</block>

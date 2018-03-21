@@ -1,0 +1,65 @@
+<!--pages/index1/index1.wxml-->
+<view class="music-head">
+  <!--搜索框-->
+  <view class="searchBar" >
+    <!--focus时 搜索icon-->
+    <view class="searchBox2" bindtap='focusevent'>
+      <icon class="searchIcon" type="search" size="14"  />
+      <input class="searchInput" confirm-type='search' placeholder="搜索" focus='{{focus}}' bindconfirm='Search' bindinput='Searchinput'/>
+    </view>
+  </view>
+</view>
+
+
+
+
+<view class='recommend' hidden='{{Hidden}}'>搜索历史</view>
+<block wx:if="{{judge}}">
+<view wx:for="{{Searchhistory}}" wx:key="unique" bindtap='searchhistory' data-texttile='{{item}}' >
+<view class='recommend1'>{{item.searcharticle}}</view>
+<view class='recommend2'></view>
+</view>
+<view class="searchBox3" bindtap='clear'>清空历史搜索记录</view>
+</block>
+
+
+
+
+
+<block wx:if="{{judge1}}">
+<view wx:for="{{Searchresult}}" wx:key="unique" bindtap='searchresult' data-texttile='{{item}}'>
+<view class='recommend1'>{{item.title}}</view>
+<view class='recommend2'></view>
+</view>
+</block>
+
+
+
+<block wx:if="{{judge2}}">
+<view class="ripple" style="{{rippleStyle}}"></view>
+<template name="msgItem">
+  <view wx:if="{{articleimagesrc}}">
+  <image src="{{articleimagesrc}}" class='recommend5'  width="35" height="50" mode='aspectFill'></image>
+  </view>
+  <view class='recommend10'>
+  <view class='recommend3'>{{title}}</view>
+  </view>
+  <view class='recommend8'>
+  <view class='text'> {{article}} </view>
+  </view>
+  <view class='recommend7'>
+  <image class="userinfo-avatar" src="{{titlesrc}}" background-size="cover"></image>
+  <view class='recommend4'>来源于{{classifyvalue}}</view>
+  <image src='/image/1.png' class='userinfo-avatar1'/>
+  <view class='text1'>{{likenumber}}</view>
+  <image src='/image/3.png' class='userinfo-avatar2'/>
+  <view class='text2'>{{commentnumber}}</view>
+  </view>
+  <view class='recommend0'></view>
+</template>
+<view class='recommend6'>
+<view wx:for="{{Searchresult}}" wx:key="unique" bindtap='nextpage3'  data-texttile='{{item}}' bindtouchstart="containerTap">
+<template is="msgItem" data="{{...item}}"/>
+</view>
+</view>
+</block>

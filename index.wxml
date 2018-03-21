@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<view class="music-head">
+  <!--搜索框-->
+  <view class="searchBar" >
+    <!--未focus时 搜索icon-->
+    <view class="searchBox2" bindtap='nextpage1'>
+      <icon class="searchIcon" type="search" size="14"  />
+      <input class="searchInput" placeholder="搜索"   disabled="{{true}}"/>
+    </view>
+    </view>
+</view>
+
+
+
+
+
+
+<swiper indicator-dots="{{true}}" class='swiper1'
+  autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}" circular="{{true}}"  indicator-color="#FFFAFA" indicator-active-color="#00BFFF">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}"   class="slide-image" width="355" height="150" mode='aspectFill' bindtap='look'/>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+
+
+<view class="ripple" style="{{rippleStyle}}"></view>
+<template name="msgItem">
+  <view wx:if="{{articleimagesrc}}">
+  <image src="{{articleimagesrc}}" class='recommend5'  width="35" height="50" mode='aspectFill'></image>
+  </view>
+  <view class='recommend2'>
+  <view class='recommend3'>{{title}}</view>
+  </view>
+  <view class='recommend8'>
+  <view class='text'> {{article}} </view>
+  </view>
+  <view class='recommend7'>
+  <image class="userinfo-avatar" src="{{titlesrc}}" background-size="cover"></image>
+  <view class='recommend4'>来源于{{classifyvalue}}</view>
+  <image src='/image/1.png' class='userinfo-avatar1'/>
+  <view class='text1'>{{likenumber}}</view>
+  <image src='/image/3.png' class='userinfo-avatar2'/>
+  <view class='text2'>{{commentnumber}}</view>
+  </view>
+  <view class='recommend1'></view>
+</template>
+<view class='recommend'>
+<view wx:for="{{staff}}" wx:key="unique" bindtap='nextpage3'  data-texttile='{{item}}' bindtouchstart="containerTap">
+<template is="msgItem" data="{{...item}}"/>
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="footer" style='opacity:0.6'>
+    <view class="edit-post" bindtap='nextpage2'>
+        <image src="../../image/write.png" class="edit-icon" />
+    </view> 
+</view>
+
+

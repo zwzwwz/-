@@ -1,0 +1,12 @@
+<!--pages/index2/index2.wxml-->
+<form bindsubmit='publish'>
+<input placeholder='请输入标题' focus='{{false}}'  class="recommend0"  name="title" maxlength="28" ></input>
+<picker mode="multiSelector" bindchange="radioChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+<button class='recommend6' size='mini' style='color:white'>分类</button>
+  </picker>
+<view class='recommend' ></view>
+<textarea placeholder='请输入文章内容' placeholder-class='recommend2' class='recommend5'  name="article"  maxlength="-1"   show-confirm-bar="{{false}}" fixed="{{true}}" ></textarea>
+<view class='recommend4'></view>
+<image src='{{src}}' style="height:{{view.height}}px;width:{{view.width}}px;margin-left:{{view.marginleft}}px;" class="slide-image" width="35" height="50" mode='aspectFill' bindtap='addimage' />
+<button  class="recommend3" style='color:white' form-type='submit'>发表</button>
+</form>

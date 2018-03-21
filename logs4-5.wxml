@@ -1,0 +1,36 @@
+<!--pages/logs4-5/logs4-5.wxml-->
+<view class='recommend2' style='-webkit-text-fill-color:{{color}}' bindtap='staffjudge'>关注</view>
+<view class='recommend3' style='-webkit-text-fill-color:{{color1}}' bindtap='staffjudge1'>粉丝</view>
+<view class='recommend5'></view>
+<view class='recommend6'  style='  left: {{distance}}px;'></view>
+
+
+
+
+<block wx:if="{{judge}}">
+<template name="msgItem">
+  <image class="userinfo-avatar" src="{{attentionsrc}}" background-size="cover"></image>
+  <view class='recommend4'>{{attentionname}}</view>
+  <view class='recommend1'></view>
+</template>
+<view class='recommend'>
+<view wx:for="{{staffmyattention}}" wx:key="unique" data-texttile='{{item}}'   bindlongpress='delmyattention' bindtap='nextmyattention'>
+<template is="msgItem" data="{{...item}}"/>
+</view>
+</view>
+</block>
+
+
+
+<block wx:if="{{!judge}}">
+<template name="msgItem1">
+  <image class="userinfo-avatar" src="{{usersrc}}" background-size="cover"></image>
+  <view class='recommend4'>{{username}}</view>
+  <view class='recommend1'></view>
+</template>
+<view class='recommend'>
+<view wx:for="{{staffmyattention1}}" wx:key="unique" data-texttile='{{item}}'      bindtap='nextmyattention1'>
+<template is="msgItem1" data="{{...item}}"/>
+</view>
+</view>
+</block>
